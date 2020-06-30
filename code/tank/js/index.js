@@ -1,4 +1,9 @@
-import Grass from "./Grass.js";
+// import Grass from "./Grass.js";
+// import Wall from "./Wall.js";
+// import Water from "./Water.js";
+// import Tank from "./Tank.js";
+// import Enemy from "./Enemy.js";
+import Game from "./Game.js";
 
 // 整个游戏入口文件
 
@@ -21,8 +26,33 @@ let ctx = oCanvas.getContext("2d");
 //     ctx.drawImage(img, 50, 50, 50, 50);
 // }
 
+// let g1 = new Grass();
 
-let g = new Grass();
+// g1.render(ctx);
 
-g.render(ctx);
+// let g2 = new Grass(50, 0);
+
+// g2.render(ctx);
+
+// let w1 = new Wall();
+
+// w1.render(ctx);
+
+// let w2 = new Water(50, 50);
+// w2.render(ctx);
+
+// let t1 = new Tank(200, 200);
+// t1.render(ctx);
+
+// let t2 = new Enemy(400, 400);
+// t2.render(ctx);
+
+
+let game = new Game(ctx);
+
+// 游戏的初始化
+game.init();
+
+// 游戏的渲染
+game.render();
 
